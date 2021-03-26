@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.border {
+  border-radius: 3px;
+  border: 2px solid black;
+}
+
+/* .display {
+  margin: 20px 16px 20px 20px;
+} */
+
+.gridParent {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.gridChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+}
+
+.mainCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* Note: I hate the below class, please remove it */
+/* .temp {
+  display: flex;
+  justify-content: space-around
+} */
