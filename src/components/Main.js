@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Display } from "./Display"
-import { Button } from "./Button"
+import { Buttons } from "./Buttons"
 
 import { numbers } from "./index"
 import { operations } from "./index"
@@ -9,16 +9,16 @@ import { operations } from "./index"
 export const Main = () => {
 
     let buttons = numbers.map((num) =>
-        <Button button={num.num} />
+        <Buttons button={num.num} />
     )
 
     let operators = operations.map((op) =>
-        <Button button={op.operation} />
+        <Buttons button={op.operation} />
     )
 
     return(
         <div>
-            <h1>This is a Calcualtor</h1>
+            <h1>This is a Calculator</h1>
             <Display />
             <div className="temp">
                 <div className="gridParent">
@@ -27,7 +27,6 @@ export const Main = () => {
                 <div>
                     { operators }
                 </div>
-                You might be wondering why I'm using divs instead of buttons. I'm wondering the same thing
             </div>
         </div>
     )
