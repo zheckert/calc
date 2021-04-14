@@ -20,5 +20,6 @@ export const operations = [
     { operation: "-" },
     { operation: "*" },
     { operation: "/" },
-    { operation: "=" }
+    { operation: "=" },
+    { operation: "c" }
 ]
