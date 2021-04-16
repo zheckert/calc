@@ -8,15 +8,16 @@ export const Buttons = (props) => {
     let arr = []
 
     const funcPush = (num) => {
-        console.log(num)
+        console.log("This is num", num)
+        setNumArray((props.button))
         arr.push(num)
-        console.log(numArray)
+        console.log("Here is my array", arr)
     }
 
     return(
         <div className="gridChild">
             {/* <Button variant="contained" onClick={() => (console.log(`${props.button} was clicked`))}>{props.button}</Button> */}
-            <Button variant="contained" onClick={() => setNumArray((numArray) => [...numArray, numArray](props.button))}
+            <Button variant="contained" onClick={() => funcPush(props.button)}
                 >{props.button}</Button>
         </div>
     )
