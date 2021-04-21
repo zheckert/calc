@@ -1,18 +1,28 @@
-import React, { useState } from "react"
+import React, { useContext } from "react"
+import { calcContext } from "../context/calcContext"
 
 import {Button} from "@material-ui/core"
 
 export const Buttons = (props) => {
-    const [numArray, setNumArray] = useState([])
+    // const [numArray, setNumArray] = useState([])
 
-    let arr = []
+    const { pushNumber, test } = useContext(calcContext)
 
-    console.log(numArray)
+    // console.log(numArray)
 
     return(
+        // <div className="gridChild">
+        //     <Button variant="contained" onClick={() => setNumArray((numArray) => [...numArray, props.button])}
+        //     >{props.button}</Button>
+        // </div>
         <div className="gridChild">
-            <Button variant="contained" onClick={() => setNumArray((numArray) => [...numArray, props.button])}
-            >{props.button}</Button>
+            {/* <Button variant="contained" onClick={() => setCalcState(calcState => [...calcState, props.button])}>{props.button}</Button> */}
+            {/* <Button variant="contained" onClick={() => pushNumber(props.button)}>
+                {props.button}
+            </Button> */}
+            <Button variant="contained" onClick={() => test(props.button)}>
+                {props.button}
+            </Button>
         </div>
     )
 }
