@@ -6,10 +6,10 @@ import { App } from './App';
 import { ContextProvider } from "./context/calcContext";
 
 ReactDOM.render(
-  <React.StrictMode>
+  
     <ContextProvider>
       <App />
-    </ContextProvider>
-  </React.StrictMode>,
+    </ContextProvider>,
+
   document.getElementById('root')
 );

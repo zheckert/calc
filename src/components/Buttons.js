@@ -6,7 +6,7 @@ import {Button} from "@material-ui/core"
 export const Buttons = (props) => {
     // const [numArray, setNumArray] = useState([])
 
-    const { pushNumber, test } = useContext(calcContext)
+    const { pushNumber } = useContext(calcContext)
 
     // console.log(numArray)
 
@@ -20,7 +20,7 @@ export const Buttons = (props) => {
             {/* <Button variant="contained" onClick={() => pushNumber(props.button)}>
                 {props.button}
             </Button> */}
-            <Button variant="contained" onClick={() => test(props.button)}>
+            <Button variant="contained" onClick={() => pushNumber(props.button)}>
                 {props.button}
             </Button>
         </div>
