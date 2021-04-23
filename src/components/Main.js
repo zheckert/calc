@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import { Display } from "./Display"
 import { Buttons } from "./Buttons"
@@ -8,8 +8,6 @@ import { operations } from "./index"
 
 export const Main = () => {
 
-    const [display, setDisplay] = useState([0])
-
     let buttons = numbers.map((num) =>
         <Buttons button={num.num} />
     )
@@ -18,17 +16,12 @@ export const Main = () => {
         <Buttons button={op.operation} />
     )
 
-    const nums = () => {
-        setDisplay()
-    }
-
     return(
         <div>
             <h1>This is a Calculator</h1>
             <div>
-                {display}
+                <Display />
             </div>
-            <Display />
             <div className="temp">
                 <div className="gridParent">
                     { buttons }

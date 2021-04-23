@@ -15,6 +15,7 @@ export const numbers = [
     { num: 0 },
 ]
 
+//add functionality to operators within their object?
 export const operations = [ 
     { operation: "+" },
     { operation: "-" },

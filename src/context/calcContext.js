@@ -4,7 +4,7 @@ export const calcContext = React.createContext()
 
 export const ContextProvider = (props) => {
     
-    const [ calcState, setCalcState ] = useState([])
+    const [ calcState, setCalcState ] = useState([0])
 
     const pushNumber = async(num) => {
         await setCalcState(calcState => [...calcState, num])
@@ -12,7 +12,7 @@ export const ContextProvider = (props) => {
     }
 
     return(
-        <calcContext.Provider value={{pushNumber}}>
+        <calcContext.Provider value={{pushNumber, calcState}}>
             { props.children}
         </calcContext.Provider>
     )
