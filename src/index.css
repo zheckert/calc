@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.display {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .border {
   border-radius: 3px;
   border: 2px solid black;

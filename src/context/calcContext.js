@@ -11,8 +11,12 @@ export const ContextProvider = (props) => {
         console.log(calcState)
     }
 
+    const clearer = () => {
+        setCalcState(0)
+    }
+
     return(
-        <calcContext.Provider value={{pushNumber, calcState}}>
+        <calcContext.Provider value={{pushNumber, calcState, clearer}}>
             { props.children}
         </calcContext.Provider>
     )

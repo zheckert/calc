@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { calcContext } from "../context/calcContext"
 
 import { Display } from "./Display"
 import { Buttons } from "./Buttons"
@@ -6,7 +7,11 @@ import { Buttons } from "./Buttons"
 import { numbers } from "./index"
 import { operations } from "./index"
 
+import {Button} from "@material-ui/core"
+
 export const Main = () => {
+
+    const { clearer } = useContext(calcContext)
 
     let buttons = numbers.map((num) =>
         <Buttons button={num.num} />
@@ -28,6 +33,9 @@ export const Main = () => {
                 </div>
                 <div>
                     { operators }
+                </div>
+                <div onClick={() => clearer()}>
+                    CLEAR
                 </div>
             </div>
         </div>
