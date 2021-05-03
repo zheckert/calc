@@ -8,11 +8,10 @@ export const ContextProvider = (props) => {
 
     const pushNumber = async(num) => {
         await setCalcState(calcState => [...calcState, num])
-        console.log(calcState)
     }
 
     const clearer = () => {
-        setCalcState(0)
+        setCalcState([0])
     }
 
     return(
